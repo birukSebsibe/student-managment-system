@@ -78,7 +78,7 @@ session_start();
                 <input type="submit" name="loginbn" id="loginb"  value="Login"/>
                 <br>
 
-                <a href="sinup4.php"> <input type="button" id="registerbt"  value="Register"/>
+            
 
 
    <?php
@@ -92,14 +92,14 @@ session_start();
     
               
 
-              $query="SELECT * FROM users WHERE username='$username' AND password='$password'";
+              $query="SELECT * FROM admin WHERE username='$username' AND password='$password'";
 
                $result= mysqli_query($conn, $query);
 
                  if(mysqli_num_rows($result))
                  {
                      $_SESSION['username']=$username;
-                      header('Location:profile.php');
+                      header('Location:adminpage.php');
 
                  }
 
